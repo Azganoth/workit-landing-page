@@ -1,0 +1,13 @@
+{
+  "name": "workit-landing-page",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass --no-source-map scss/style.scss css/style.css",
+    "dev": "sass --no-source-map -w scss/style.scss css/style.css",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "~2.8.7",
+    "sass": "~1.60.0"
+  }
+}
