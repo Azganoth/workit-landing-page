@@ -2,10 +2,10 @@
 
 ## Colors
 
-Black Rock: #24053E
-Screamin Green: #44FFA1
-Scarpa Flow: #584D62
-Magnolia: #FCF8FF
+Dark purple: #24053E
+Eucalyptus: #44FFA1
+Davy's grey: #584D62
+Ghost white: #FCF8FF
 White: #FFF
 
 ## Typography
