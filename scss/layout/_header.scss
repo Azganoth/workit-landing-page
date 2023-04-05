@@ -1,0 +1,151 @@
+.header {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 0;
+  color: var(--white);
+
+  @include breakpoint(tablet) {
+    padding: 33px 40px 0 39px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 56px 166px 0 165px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: var(--dark-purple);
+    transform: scaleX(2.9) translateY(-91px);
+
+    @include breakpoint(tablet) {
+      transform: scaleX(2.3) translateY(-150px);
+    }
+
+    @include breakpoint(desktop) {
+      transform: scaleX(1.9) translateY(-166px);
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__logo {
+    display: block;
+
+    @include breakpoint(desktop) {
+      margin-top: -8px;
+    }
+  }
+
+  &__welcome {
+    margin-top: 64px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      margin-top: 56px;
+    }
+
+    @include breakpoint(desktop) {
+      margin-top: 55px;
+    }
+  }
+
+  &__emphasis {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-bottom: 3px solid var(--eucalyptus-green);
+    }
+  }
+
+  &__learn-more {
+    margin-top: 40px;
+
+    @include breakpoint(tablet) {
+      margin-top: 39px;
+    }
+
+    @include breakpoint(desktop) {
+      margin-top: 37px;
+    }
+  }
+
+  &__hero {
+    margin-top: 64px;
+    margin-left: 17px;
+    width: 320px;
+    height: 184px;
+
+    @include breakpoint(tablet) {
+      margin-top: 55px;
+      margin-left: 48px;
+      width: 514px;
+      height: 296px;
+    }
+
+    @include breakpoint(desktop) {
+      margin-top: 50px;
+      margin-left: 49px;
+      width: 767px;
+      height: 441px;
+    }
+  }
+
+  &__pattern-1 {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+      position: absolute;
+      top: 71px;
+      right: calc(50% + 271px);
+    }
+
+    @include breakpoint(desktop) {
+      display: block;
+      position: absolute;
+      top: 116px;
+      right: calc(50% + 518px);
+    }
+  }
+
+  &__pattern-2 {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+      position: absolute;
+      top: 250px;
+      left: calc(50% + 305px);
+    }
+
+    @include breakpoint(desktop) {
+      display: block;
+      position: absolute;
+      top: 314px;
+      left: calc(50% + 595px);
+    }
+  }
+}

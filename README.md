@@ -36,7 +36,7 @@ Users should be able to:
 
 - HTML5
 - CSS3
-- JavaScript
+- Mobile-first workflow
 - [SASS](https://sass-lang.com/) - For styles
 
 <!-- ### Useful resources

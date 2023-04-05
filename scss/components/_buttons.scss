@@ -1,0 +1,59 @@
+@mixin common {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  letter-spacing: -0.16px;
+
+  @include breakpoint(desktop) {
+    letter-spacing: -0.18px;
+  }
+}
+
+.button-primary {
+  @include common;
+
+  padding: 11px 23px 12px 21px;
+  border: 2px solid var(--eucalyptus-green);
+  background: var(--eucalyptus-green);
+  color: var(--dark-purple);
+
+  &:hover {
+    background: transparent;
+    color: var(--eucalyptus-green);
+  }
+
+  @include breakpoint(desktop) {
+    padding: 11px 30px 14px 33px;
+  }
+}
+
+.button-secondary {
+  @include common;
+
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 2px 0 0;
+
+  &:hover {
+    color: var(--eucalyptus-green);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 1px;
+    border-bottom: 3px solid var(--eucalyptus-green);
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0;
+  }
+}
