@@ -4,4 +4,6 @@
   --davy-grey: #584d62;
   --ghost-white: #fcf8ff;
   --white: #fff;
+
+  @include responsive-var("bg-decoration-size", 1970px, 4120px, 7630px);
 }

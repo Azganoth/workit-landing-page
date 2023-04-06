@@ -1,6 +1,7 @@
 .header {
   overflow: hidden;
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,20 +19,15 @@
   &::before {
     content: "";
     position: absolute;
-    inset: 0;
     z-index: -1;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-radius: 50%;
     background: var(--dark-purple);
-    transform: scaleX(2.9) translateY(-91px);
 
-    @include breakpoint(tablet) {
-      transform: scaleX(2.3) translateY(-150px);
-    }
+    @include responsive-var("offset", 91px, 148px, 165px);
 
-    @include breakpoint(desktop) {
-      transform: scaleX(1.9) translateY(-166px);
-    }
+    bottom: var(--offset);
+    width: var(--bg-decoration-size);
+    height: var(--bg-decoration-size);
   }
 
   &__navigation {
@@ -124,8 +120,6 @@
     }
 
     @include breakpoint(desktop) {
-      display: block;
-      position: absolute;
       top: 116px;
       right: calc(50% + 518px);
     }
@@ -142,8 +136,6 @@
     }
 
     @include breakpoint(desktop) {
-      display: block;
-      position: absolute;
       top: 314px;
       left: calc(50% + 595px);
     }

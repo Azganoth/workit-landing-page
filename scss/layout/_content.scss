@@ -1,0 +1,226 @@
+.content {
+}
+
+.benefits {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  $mobile-offset: 170px;
+  $tablet-offset: 280px;
+  $desktop-offset: 894px;
+
+  margin-top: calc($mobile-offset * -1);
+  padding: calc($mobile-offset + 64px) 0 71px;
+
+  @include breakpoint(tablet) {
+    margin-top: calc($tablet-offset * -1);
+    padding: calc($tablet-offset + 56px) 0 104px;
+  }
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    margin-top: calc($desktop-offset * -1);
+    padding: calc($desktop-offset + 90px) 0 171px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    background: var(--ghost-white);
+
+    @include responsive-var("offset", 91px, 148px, 165px);
+
+    bottom: 0;
+    width: var(--bg-decoration-size);
+    height: var(--bg-decoration-size);
+  }
+}
+
+.benefit {
+  flex-basis: 100%;
+
+  @include breakpoint-mobile-only() {
+    margin-left: calc(50% - 171px);
+    margin-right: calc(50% - 172px);
+  }
+
+  @include breakpoint-tablet-only() {
+    display: grid;
+    grid-template: auto auto / auto auto;
+    margin-left: calc(50% - 287px);
+    margin-right: calc(50% - 270px);
+  }
+
+  @include breakpoint(desktop) {
+    &:first-child {
+      margin-left: calc(50% - 555px);
+    }
+
+    &:not(:first-child) {
+      margin-left: 26px;
+    }
+
+    &:last-child {
+      margin-right: calc(50% - 559px);
+    }
+  }
+
+  &:not(:first-child) {
+    @include breakpoint-mobile-only() {
+      margin-top: 40px;
+    }
+
+    @include breakpoint-tablet-only() {
+      margin-top: 48px;
+    }
+  }
+
+  &__number {
+    @extend .title;
+    display: inline-block;
+    padding: 3px 0 5px;
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 48px;
+    font-size: 20px;
+    line-height: 36px;
+
+    @include breakpoint-tablet-only() {
+      grid-row: 1 / 3;
+      margin: 45px 32px auto 0;
+    }
+
+    @include breakpoint(desktop) {
+      padding: 7px 0;
+      width: 56px;
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+
+  &__title {
+    margin: 24px 0 16px;
+
+    @include breakpoint-tablet-only() {
+      margin-top: 0;
+      text-align: left;
+    }
+
+    @include breakpoint(desktop) {
+      margin: 56px 0 28px;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    @include breakpoint-tablet-only() {
+      text-align: left;
+      grid-column-start: 2;
+    }
+  }
+}
+
+.talk {
+  position: relative;
+  display: flex;
+  margin: 101px calc(50% - 171.5px) 0 calc(50% - 171.5px);
+
+  @include breakpoint-mobile-only() {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include breakpoint(tablet) {
+    margin: 100px calc(50% - 344px) 0 calc(50% - 345px);
+  }
+
+  @include breakpoint(desktop) {
+    margin: 110px calc(50% - 555px) 0 calc(50% - 557px);
+  }
+
+  &__founder {
+    @include responsive-var(size, 281px, null, 477px);
+
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &__apply {
+    margin-top: -53px;
+    padding: 32px 31px;
+    background: var(--dark-purple);
+    color: var(--white);
+
+    @include breakpoint-mobile-only() {
+      text-align: center;
+    }
+
+    @include breakpoint(tablet) {
+      margin-top: 151px;
+      margin-left: -106px;
+      padding: 48px 56px 56px;
+    }
+
+    @include breakpoint(desktop) {
+      margin-top: 173px;
+      margin-left: -95px;
+      padding: 64px;
+    }
+
+    > p {
+      margin-bottom: 24px;
+
+      @include breakpoint(tablet) {
+        margin-top: 24px;
+      }
+
+      @include breakpoint(desktop) {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+
+    > a {
+      padding-left: 22px;
+      padding-right: 22px;
+      @include breakpoint-mobile-only() {
+        margin-left: 1px;
+      }
+
+      @include breakpoint(tablet) {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      @include breakpoint(desktop) {
+        padding-left: 24px;
+        padding-right: 23px;
+      }
+    }
+  }
+
+  &__pattern {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+      position: absolute;
+      top: 420px;
+      right: 12px;
+    }
+
+    @include breakpoint(desktop) {
+      top: 436px;
+      right: 72px;
+    }
+  }
+}

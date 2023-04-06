@@ -1,11 +1,52 @@
+$tablet: 768px;
+$desktop: 1440px;
+
 // desktop >=1440px, tablet >=768px, mobile <768px
 $breakpoints: (
-  "tablet": 768px,
-  "desktop": 1440px,
+  "tablet": $tablet,
+  "desktop": $desktop,
 );
 
 @mixin breakpoint($device) {
+  @if not map-has-key($breakpoints, $device) {
+    @error "Breakpoint for #{$device} not available.";
+  }
+
   @media (min-width: map-get($breakpoints, $device)) {
     @content;
+  }
+}
+
+@mixin breakpoint-mobile-only() {
+  @media (max-width: calc($tablet - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-only() {
+  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    @content;
+  }
+}
+
+@mixin responsive-var($name, $mobile: null, $tablet: null, $desktop: null) {
+  @if not $name or $name == "" {
+    @error "Responsive variable must have a name.";
+  }
+
+  @if $mobile != null {
+    --#{$name}: #{$mobile};
+  }
+
+  @include breakpoint(tablet) {
+    @if $tablet != null {
+      --#{$name}: #{$tablet};
+    }
+  }
+
+  @include breakpoint(desktop) {
+    @if $desktop != null {
+      --#{$name}: #{$desktop};
+    }
   }
 }
