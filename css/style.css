@@ -421,7 +421,7 @@ body {
   display: inline-block;
   padding: 3px 0 5px;
   margin: 0;
-  border: 1px solid black;
+  border: 1px solid var(--davy-grey);
   border-radius: 50%;
   width: 48px;
   font-size: 20px;
@@ -457,6 +457,7 @@ body {
 }
 .benefit p {
   margin: 0;
+  color: var(--davy-grey);
 }
 @media (min-width: 768px) and (max-width: 1439px) {
   .benefit p {
