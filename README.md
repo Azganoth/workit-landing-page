@@ -8,8 +8,11 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
+    - [Useful resources](#useful-resources)
   - [Author](#author)
 
 ## Overview
@@ -21,28 +24,31 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-<!-- ### Screenshot
+### Screenshot
 
-![](/screenshot.jpg) -->
+![](/screenshot.png)
 
-<!-- ### Links
+### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Solution URL: [Mobile-first solution using SASS and CSS custom properties](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-sass-and-css-custom-properties--4jKYLilZR)
+- Live Site URL: [Frontend Mentor | Workit landing page](https://azganoth.github.io/workit-landing-page/)
 
 ## My process
 
 ### Built with
 
 - HTML5
+  - Semantic markup
 - CSS3
+  - Custom properties
+  - Flexbox
+  - Grid
 - Mobile-first workflow
-- [SASS](https://sass-lang.com/) - For styles
+- [SASS](https://sass-lang.com/)
 
-<!-- ### Useful resources
+### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
+- [WAVE Web Accessibility Evaluation Tools](https://wave.webaim.org/) - This helped me check for accessibility errors.
 
 ## Author
 
