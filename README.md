@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Mobile-first solution using SASS and CSS custom properties](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-sass-and-css-custom-properties--4jKYLilZR)
+- Solution URL: [Mobile-first solution using SASS and CSS custom properties](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-sass-and-css-custom-properties-QVVApwyg1F)
 - Live Site URL: [Frontend Mentor | Workit landing page](https://azganoth.github.io/workit-landing-page/)
 
 ## My process
