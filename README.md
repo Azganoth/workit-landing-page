@@ -7,7 +7,7 @@ This is a solution for the [Workit landing page challenge on Frontend Mentor](ht
 - [Overview](#overview)
 - [Development](#development)
   - [Stack](#stack)
-  - [Workflow and Automation](#workflow-and-automation)
+  - [Tools and Workflow](#tools-and-workflow)
   - [Resources](#resources)
 - [Showcase](#showcase)
   - [Links](#links)
